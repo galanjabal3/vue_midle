@@ -1,0 +1,49 @@
+.all_login {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.text {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card {
+  max-width: 400px;
+  width: 350px;
+  height: auto;
+  padding: 30px 30px;
+  border-radius: 8px;
+}
+
+.form {
+  padding-top: 20px;
+}
+
+.button {
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button_login {
+  background: blue;
+  width: 50%;
+  height: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.reg {
+  text-align: right;
+  padding-top: 20px;
+}
+.register {
+  text-decoration: none;
+}
