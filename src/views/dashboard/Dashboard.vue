@@ -1,6 +1,14 @@
 <template>
   <div class="body_dashboard">
     <h1 class="py-4 text-center text-xl">Dashboard</h1>
+    <b-button
+      variant="outline-success"
+      class="mb-2 absolute top-0 right-0"
+      @click="logOut"
+    >
+      <b-icon icon="power" class="text-green" aria-hidden="true"></b-icon>
+      Logout
+    </b-button>
     <div>
       <b-form class="add">
         <b-form-input
@@ -24,12 +32,12 @@
     </div>
     <table class="table">
       <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nama Barang</th>
-        <th scope="col">Tangal Dibuat</th>
-        <th scope="col">Harga</th>
-        <th scope="col">Pemilik</th>
-        <th scope="col">Aksi</th>
+        <th>Id</th>
+        <th>Nama Barang</th>
+        <th>Tangal Dibuat</th>
+        <th>Harga</th>
+        <th>Pemilik</th>
+        <th>Aksi</th>
       </tr>
       <tr
         v-for="(data, index) in listBarang"

@@ -82,20 +82,31 @@ export default {
         success: () => {
           this.getDataBarang();
         },
-        failed: (error) => {
-          console.log(error);
+        failed: () => {
+          // console.log(error);
         },
       });
     },
     editBarang(data) {
-      console.log(data);
+      // console.log(data);
       this.id = data.id;
       this.barang = data.barang;
       this.harga = data.harga;
       this.editData = true;
     },
+    logOut() {
+      localStorage.removeItem("user");
+      this.$router.push("login")
+    },
+    validationUser() {
+      const guest = localStorage.getItem("user")
+      if (guest == null) {
+        this.$router.push("login")
+      }
+    }
   },
   mounted() {
     this.getDataBarang();
+    this.validationUser();
   },
 };

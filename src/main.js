@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import { BootstrapVue, IconsPlugin, BSpinner } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin, BSpinner , BIcon } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import "tailwindcss/dist/tailwind.min.css";
@@ -15,7 +15,9 @@ import "tailwindcss/dist/utilities.min.css";
 Vue.component('b-spinner', BSpinner)
 Vue.config.productionTip = false;
 
-Vue.use(BootstrapVue, IconsPlugin)
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
+Vue.component('BIcon', BIcon)
 
 new Vue({
   router,
